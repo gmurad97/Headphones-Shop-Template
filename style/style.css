@@ -95,17 +95,22 @@ button[type="button"]:hover::before {
     position: absolute;
     top: 0px;
     width: 100%;
-    background-color: #FAC769;
+    height: 100%;
+    background-color: rgb(250, 199, 105, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(7px);
     visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+    z-index: 1;
 }
 
 .hidden-navbar>ul{
     list-style-type: none;
-    margin: 22px 0px;
+    margin-bottom: 22px;
 }
 
 .hidden-navbar>ul>li{
