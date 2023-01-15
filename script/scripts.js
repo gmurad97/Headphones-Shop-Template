@@ -1,7 +1,7 @@
 function showNavbar() {
     var navbarBurger = document.querySelector(".fa-custom-navbar");
     var navbarBurgerClasses = document.getElementById("navToggler");
-    var navbar = document.querySelector(".hidden-navbar");
+    var navbar = document.querySelector(".h-hidden-navbar");
     var navbarVisibleState = window.getComputedStyle(navbar, null).visibility;
     if (navbarVisibleState == "hidden") {
         navbarBurgerClasses.classList.remove("fa-bars");

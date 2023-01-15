@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
-@import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i);
 
 *,
 *::before,
@@ -14,7 +13,39 @@ body {
     font-family: "Poppins";
 }
 
+/*BEGIN - CUSTOM SCROLL BAR*/
+
+::-webkit-scrollbar {
+    width: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #232323;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #BE9500;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #4B4B4B;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #6F6F6F;
+}
+
+/*ENDED - CUSTOM SCROLL BAR*/
+
 /*BEGIN - GLOBAL BUTTON STYLE & ANIMATION*/
+
+/*BEGIN - GLOBAL LEAN_MORE STYLE*/
+
+a[href="#LearnMore"]{
+    text-decoration: none;
+}
+
+/*ENDED - GLOBAL LEAN_MORE STYLE*/
 
 button[type="button"] {
     position: relative;
@@ -81,17 +112,20 @@ button[type="button"]:hover::before {
 
 /*BEGIN - HIDDEN NAVBAR SECTION*/
 
-.fa-custom-navbar {
+.h-hidden-navbar-btn {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
+}
+
+.fa-custom-navbar {
     font-size: 24px;
-    margin: 16px;
+    padding: 16px;
     cursor: pointer;
 }
 
-.hidden-navbar{
+.h-hidden-navbar {
     position: absolute;
     top: 0px;
     width: 100%;
@@ -108,34 +142,34 @@ button[type="button"]:hover::before {
     z-index: 1;
 }
 
-.hidden-navbar>ul{
+.h-hidden-navbar>ul {
     list-style-type: none;
     margin-bottom: 22px;
 }
 
-.hidden-navbar>ul>li{
+.h-hidden-navbar>ul>li {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hidden-navbar>ul>li:not(:last-of-type){
+.h-hidden-navbar>ul>li:not(:last-of-type) {
     margin-bottom: 12px;
 }
 
-.hidden-navbar>ul>li>a{
-    font-size: 0.9rem;
-    font-weight: 500;
+.h-hidden-navbar>ul>li>a {
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
     color: #232323;
     transition: color 0.3s linear;
 }
 
-.hidden-navbar>ul>li>a:hover{
-    color: #6F6F6F;
+.h-hidden-navbar>ul>li>a:hover {
+    color: #849BAA;
 }
 
-.social{
+.h-social {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -143,7 +177,7 @@ button[type="button"]:hover::before {
     margin-bottom: 22px;
 }
 
-.fa-custom-btn{
+.fa-custom-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,24 +191,24 @@ button[type="button"]:hover::before {
     transition: color 0.5s linear, border 0.5s linear;
 }
 
-.fa-custom-btn:hover{
-    color: #6F6F6F;
-    border: 1px solid #6F6F6F;
+.fa-custom-btn:hover {
+    color: #232323;
+    border: 1px solid #232323;
 }
 
-.fa-custom-btn:not(:last-of-type){
+.fa-custom-btn:not(:last-of-type) {
     margin-right: 8px;
 }
 
-.btn-nav{
+.btn-nav {
     width: 150px !important;
     height: 40px !important;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
 }
 
 /*ENDED - HIDDEN NAVBAR SECTION*/
 
-.description {
+.h-description {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -183,7 +217,7 @@ button[type="button"]:hover::before {
     margin-left: 8%;
 }
 
-.description>p {
+.h-description>p {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -191,7 +225,7 @@ button[type="button"]:hover::before {
     margin-bottom: 16px;
 }
 
-.description>h1 {
+.h-description>h1 {
     font-size: 3.2rem;
     font-weight: bold;
     color: #232323;
@@ -201,3 +235,54 @@ button[type="button"]:hover::before {
 }
 
 /*ENDED - HEADER ELEMENTS*/
+
+/*BEGIN - MAIN ELEMENTS*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.m-description{
+    display: flex;
+    flex-direction: column;
+    max-width: 1152px;
+    margin: 64px 0px;
+}
+
+.m-description>h1{
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 24px;
+}
+
+.m-description>p{
+    font-size: 15px;
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 28px;
+}
+
+.m-recommended{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC862;
+    width: 100%;
+    padding: 32px;
+}
+
+.m-recommended>h1{
+    color: #FFFFFF;
+}
+
+/*BEGIN - CONTENT & CARD ELEMENTS*/
+/*************************************************************************************/
+/*ENDED - CONTENT & CARD ELEMENTS*/
+
+/*ENDED - MAIN ELEMENTS*/
