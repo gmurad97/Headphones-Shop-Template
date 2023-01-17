@@ -1,3 +1,5 @@
+/*BEGIN - GLOBAL INTERNAL STYLE*/
+
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
 
 *,
@@ -12,8 +14,6 @@ body {
     background-color: #FFFFFF;
     font-family: "Poppins";
 }
-
-/*BEGIN - CUSTOM SCROLL BAR*/
 
 ::-webkit-scrollbar {
     width: auto;
@@ -35,17 +35,14 @@ body {
     background-color: #6F6F6F;
 }
 
-/*ENDED - CUSTOM SCROLL BAR*/
+/*ENDED - GLOBAL INTERNAL STYLE*/
 
-/*BEGIN - GLOBAL BUTTON STYLE & ANIMATION*/
+/*BEGIN - GLOBAL EXTERNAL STYLE*/
 
-/*BEGIN - GLOBAL LEAN_MORE STYLE*/
-
-a[href="#LearnMore"] {
+a[data-type="learn-more"] {
     text-decoration: none;
+    color: #FFC900;
 }
-
-/*ENDED - GLOBAL LEAN_MORE STYLE*/
 
 button[type="button"] {
     position: relative;
@@ -94,9 +91,10 @@ button[type="button"]:hover::before {
     }
 }
 
-/*ENDED - GLOBAL BUTTON STYLE & ANIMATION*/
+/*ENDED - GLOBAL EXTERNAL STYLE*/
 
-/*BEGIN - HEADER ELEMENTS*/
+/*BEGIN - HEADER SECTION*/
+
 .header {
     position: relative;
     height: 100vh;
@@ -130,7 +128,7 @@ button[type="button"]:hover::before {
     top: 0px;
     width: 100%;
     height: 100%;
-    background-color: rgb(250, 199, 105, 0.5);
+    background-color: rgb(250, 199, 105, 0.55);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,17 +142,34 @@ button[type="button"]:hover::before {
 
 .h-hidden-navbar>ul {
     list-style-type: none;
-    margin-bottom: 22px;
+    margin-bottom: 32px;
 }
 
 .h-hidden-navbar>ul>li {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .h-hidden-navbar>ul>li:not(:last-of-type) {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.h-hidden-navbar>ul>li::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: #DCAC00;
+    border-radius: 3px;
+    transition: width 0.3s linear;
+}
+
+.h-hidden-navbar>ul>li:hover::before {
+    width: 100%;
 }
 
 .h-hidden-navbar>ul>li>a {
@@ -162,22 +177,19 @@ button[type="button"]:hover::before {
     font-weight: 600;
     text-decoration: none;
     color: #232323;
-    transition: color 0.3s linear;
+    padding: 7px;
+    z-index: 1;
 }
 
-.h-hidden-navbar>ul>li>a:hover {
-    color: #849BAA;
-}
-
-.h-social {
+.h-hn-social {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 22px;
+    margin-bottom: 32px;
 }
 
-.fa-custom-btn {
+.fa-h-hn-social-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,55 +200,56 @@ button[type="button"]:hover::before {
     border: 1px solid #FFFFFF;
     border-radius: 50%;
     cursor: pointer;
-    transition: color 0.5s linear, border 0.5s linear;
+    transition: color 0.3s linear, border 0.3s linear;
 }
 
-.fa-custom-btn:hover {
+.fa-h-hn-social-btn:not(:last-of-type) {
+    margin-right: 12px;
+}
+
+.fa-h-hn-social-btn:hover {
     color: #232323;
     border: 1px solid #232323;
 }
 
-.fa-custom-btn:not(:last-of-type) {
-    margin-right: 8px;
-}
-
-.btn-nav {
+#h-hn-btn {
     width: 150px !important;
     height: 40px !important;
-    margin-bottom: 16px !important;
 }
 
 /*ENDED - HIDDEN NAVBAR SECTION*/
 
 .h-description {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 8%;
+    width: auto;
+    height: 100%;
+    margin-left: 7%;
 }
+
 
 .h-description>p {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #232323;
+    color: #333333;
     margin-bottom: 16px;
 }
 
 .h-description>h1 {
     font-size: 3.2rem;
     font-weight: bold;
-    color: #232323;
+    color: #333333;
     letter-spacing: -1px;
     line-height: 1.2;
     margin-bottom: 16px;
 }
 
-/*ENDED - HEADER ELEMENTS*/
+/*ENDED - HEADER SECTION*/
 
-/*BEGIN - MAIN ELEMENTS*/
+/*BEGIN - MAIN SECTION*/
 
 .main {
     display: flex;
@@ -257,17 +270,17 @@ button[type="button"]:hover::before {
 .m-description>h1 {
     font-size: 2rem;
     font-weight: lighter;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .m-description>p {
     font-size: 15px;
-    text-indent: 20px;
     text-align: justify;
+    text-indent: 20px;
     line-height: 28px;
 }
 
-.m-recommended {
+.m-recommended-first {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -277,22 +290,22 @@ button[type="button"]:hover::before {
     padding: 32px;
 }
 
-.m-recommended>h1 {
+.m-recommended-first>h1 {
     color: #FFFFFF;
 }
 
-/*BEGIN - CONTENT & CARD ELEMENTS*/
+/*BEGIN - CONTENT & CARD SECTION*/
 
-.m-content{
+.m-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1152px;
-    margin-top: 64px;
+    margin: 64px 0px;
 }
 
-.mc-hottest{
+.mc-hottest {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -300,13 +313,14 @@ button[type="button"]:hover::before {
     width: 100%;
 }
 
-.mc-hottest>h1{
+.mc-hottest>h1 {
     font-size: 2rem;
     font-weight: lighter;
-    margin-bottom: 16px;
+    color: #232323;
+    margin-bottom: 32px;
 }
 
-.mc-hottest-card-container{
+.mc-hottest-card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -315,7 +329,7 @@ button[type="button"]:hover::before {
     width: 100%;
 }
 
-.mc-hottest-card{
+.mc-hottest-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,68 +337,115 @@ button[type="button"]:hover::before {
     width: 350px;
 }
 
-/* .mc-hottest-card:not(:nth-child(3n)){
-    margin-right: 32px;
-}
-.mc-hottest-card:last-of-type{
-    margin-right: 0px;
-} */
-
-.mc-hottest-card-body{
+.mc-hottest-card-body {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.mc-hottest-card-body>img{
+.mc-hottest-card-body>img {
     width: 100%;
 }
 
-.mc-hottest-card-description{
+.mc-hottest-card-description {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: red;
-    border-radius: 15px;
-    padding: 15px;
+    top: 25px;
+    left: 25px;
+    background-color: #FFC862;
+    font-size: 0.875rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #232323;
+    border-radius: 30px;
+    padding: 10px 15px;
 }
 
-.mc-hottest-card-footer{
-    background-color: blue;
+.mc-hottest-card-footer {
+    background-color: #FFC862;
+    padding: 20px;
 }
 
-.mc-new{
+.mc-hottest-card-footer>h1 {
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    color: #232323;
+}
+
+.mc-hottest-card-footer>p {
+    color: #FFFFFF;
+    margin-top: 6px;
+}
+
+.mc-new {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 64px;
     width: 100%;
+    margin-top: 64px;
 }
 
-.mc-new>h1{
-    margin-bottom: 16px;
+.mc-new>h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 32px;
 }
 
-.mc-new-card-container{
+.mc-new-card-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.mc-new-card>img{
+.mc-new-card>img {
     width: 280px;
 
 }
-/*ENDED - CONTENT & CARD ELEMENTS*/
 
-.sor-debt{
+/*ENDED - CONTENT & CARD SECTION*/
+
+
+/*REDDDDDDDDDDDDDDACT THIS CODE************************************************THIS CODE FOR EDIT!!**************/
+/*I'm tired I can't think anymore sorry :(*/
+.m-recommended-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC862;
+    align-content: flex-start;
+    text-align: left;
+    width: 100%;
+}
+/*I'm tired I can't think anymore sorry :(*/
+/*REDDDDDDDDDDDDDDACT THIS CODE************************************************THIS CODE FOR EDIT!!**************/
+
+/*BEGIN - LENDING SECTION*/
+
+.mc-lending {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-/*ENDED - MAIN ELEMENTS*/
+
+.mc-lending>h1{
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 32px;
+}
+
+/*I'm tired I can't think anymore sorry :(*/
+.mc-lending-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*I'm tired I can't think anymore sorry :(*/
+
+/*ENDED - LENDING SECTION*/
+
+/*ENDED - MAIN SECTION*/
