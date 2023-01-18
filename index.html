@@ -11,6 +11,7 @@
     <script src="script/scripts.js"></script>
 </head>
 <body>
+    <!--BEGIN - HEADER & NAVBAR & HIDDEN NAVBAR SECTION-->
     <div class="header">
         <div class="h-hidden-navbar-btn">
             <span onclick="showNavbar();" id="navToggler" class="fa-solid fa-bars fa-custom-navbar"></span>
@@ -35,6 +36,9 @@
             <button type="button">Shopping Now</button>
         </div>
     </div>
+    <!--ENDED - HEADER & NAVBAR & HIDDEN NAVBAR SECTION-->
+
+    <!--BEGIN - MAIN & DESCRIPTION & CARD & GALLERY & LENDING & MAPS SECTION-->
     <div class="main">
         <div class="m-description">
             <h1>Find a quality and right headphones not easy</h1>
@@ -117,99 +121,91 @@
                 </div>
             </div>
         </div>
-
         <div class="m-recommended-second">
-            <p>Hurry up! The offer is limited</p>
-            <h1>Like it? Pre-order and get a discount</h1>
-            <button type="button" id="mrc-btn">Learn More</button>
+            <div class="mrs-left">
+                <p>Hurry up! The offer is limited</p>
+                <h1>Like it? Pre-order and get a discount</h1>
+            </div>
+            <div class="mrs-right">
+                <button type="button" id="mrs-btn">Learn More</button>
+            </div>
         </div>
-
-
-
-
-
         <div class="m-content">
             <div class="mc-lending">
                 <h1>Why do you have to buy headphones only for us?</h1>
                 <div class="mc-lending-card-container">
-
-
                     <div class="mc-lending-card">
-
-
                         <div class="mc-lending-card-body">
-                            <h1>01.</h1>
+                            <p>01.</p>
                             <p>High quality</p>
                         </div>
-
-
                         <div class="mc-lending-card-footer">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <a href="#Lern more">Learnmore</a>
+                            <a href="#LearnMore" data-type="learn-more">Learn More...</a>
                         </div>
-
-
                     </div>
-
-
+                    <div class="mc-lending-card">
+                        <div class="mc-lending-card-body">
+                            <p>02.</p>
+                            <p>Original devices</p>
+                        </div>
+                        <div class="mc-lending-card-footer">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#LearnMore" data-type="learn-more">Learn More...</a>
+                        </div>
+                    </div>
+                    <div class="mc-lending-card">
+                        <div class="mc-lending-card-body">
+                            <p>03.</p>
+                            <p>Year warranty</p>
+                        </div>
+                        <div class="mc-lending-card-footer">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#LearnMore" data-type="learn-more">Learn More...</a>
+                        </div>
+                    </div>
+                    <div class="mc-lending-card">
+                        <div class="mc-lending-card-body">
+                            <p>04.</p>
+                            <p>Week to check</p>
+                        </div>
+                        <div class="mc-lending-card-footer">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#LearnMore" data-type="learn-more">Learn More...</a>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-        <div class="mc-maps-container">
-            <p>Still not convinced?</p>
-            <h1>Visit us and see yourself!</h1>
-            <div class="mc-maps">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.061027272388!2d49.82576912816072!3d40.385340030226594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9bdc74118b%3A0xc8377414faa8f86b!2sSTIMUL%20Education%20%26%20Consulting!5e0!3m2!1sru!2s!4v1673909406121!5m2!1sru!2s"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="mc-maps-container">
+                <p>Still not convinced?</p>
+                <h1>Visit us and see yourself!</h1>
+                <div class="mc-maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.061027272388!2d49.82576912816072!3d40.385340030226594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9bdc74118b%3A0xc8377414faa8f86b!2sSTIMUL%20Education%20%26%20Consulting!5e0!3m2!1sru!2s!4v1673909406121!5m2!1sru!2s"
+                        id="maps" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
     </div>
+    <!--ENDED - MAIN & DESCRIPTION & CARD & GALLERY & LENDING & MAPS SECTION-->
 
-
-
-
-
-
-
-
-
+    <!--BEGIN - FOOTER-->
     <div class="footer">
         <div class="f-logo">
-            <img src="img/content/new-product/01.jpg" alt="">
+            <img src="img/content/new-product/01.jpg" alt="Footer Logo">
         </div>
         <div class="f-description">
             <p>&copy; 2018 All rights reserved terms of use and Privacy Policy</p>
         </div>
         <div class="f-social">
-            <span class="fa-brands fa-twitter fa-custom-btn"></span>
-            <span class="fa-brands fa-facebook-f fa-custom-btn"></span>
-            <span class="fa-brands fa-instagram fa-custom-btn"></span>
-            <span class="fa-brands fa-twitter fa-custom-btn"></span>
-            <span class="fa-brands fa-facebook-f fa-custom-btn"></span>
-            <span class="fa-brands fa-instagram fa-custom-btn"></span>
+            <span class="fa-brands fa-facebook-f fa-custom-footer"></span>
+            <span class="fa-brands fa-twitter fa-custom-footer"></span>
+            <span class="fa-brands fa-linkedin-in fa-custom-footer"></span>
+            <span class="fa-brands fa-youtube fa-custom-footer"></span>
+            <span class="fa-solid fa-rss fa-custom-footer"></span>
         </div>
     </div>
+    <!--ENDED - FOOTER-->
 </body>
-
 </html>
