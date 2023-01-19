@@ -177,7 +177,7 @@ button[type="button"]:hover::before {
 }
 
 .h-hidden-navbar>ul>li>a {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     color: #232323;
@@ -235,7 +235,7 @@ button[type="button"]:hover::before {
 
 
 .h-description>p {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     color: #333333;
@@ -243,7 +243,7 @@ button[type="button"]:hover::before {
 }
 
 .h-description>h1 {
-    font-size: 3.2rem;
+    font-size: 51px;
     font-weight: bold;
     color: #333333;
     letter-spacing: -1px;
@@ -272,7 +272,7 @@ button[type="button"]:hover::before {
 }
 
 .m-description>h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: lighter;
     margin-bottom: 32px;
 }
@@ -318,7 +318,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-hottest>h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: lighter;
     color: #232323;
     margin-bottom: 32px;
@@ -357,7 +357,7 @@ button[type="button"]:hover::before {
     top: 25px;
     left: 25px;
     background-color: #FFC862;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: lighter;
     text-transform: uppercase;
     color: #232323;
@@ -371,7 +371,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-hottest-card-footer>h1 {
-    font-size: 1.0625rem;
+    font-size: 17px;
     text-transform: uppercase;
     color: #232323;
 }
@@ -391,7 +391,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-new>h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: lighter;
     text-transform: capitalize;
     margin-bottom: 32px;
@@ -430,14 +430,14 @@ button[type="button"]:hover::before {
 
 .mrs-left>p {
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: lighter;
     color: #FFFFFF;
     margin-bottom: 20px;
 }
 
 .mrs-left>h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: bold;
     color: #FFFFFF;
 }
@@ -466,7 +466,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-lending>h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: lighter;
     margin-bottom: 32px;
 }
@@ -493,7 +493,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-lending-card-body>p:nth-of-type(1) {
-    font-size: 3.5rem;
+    font-size: 56px;
     font-weight: bold;
     color: #FFC862;
 }
@@ -502,7 +502,7 @@ button[type="button"]:hover::before {
     position: absolute;
     top: 30px;
     left: -5px;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     white-space: pre;
     text-transform: uppercase;
@@ -526,7 +526,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-maps-container>p {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     color: #777777;
@@ -534,7 +534,7 @@ button[type="button"]:hover::before {
 }
 
 .mc-maps-container>h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: bold;
     color: #232323;
     margin-bottom: 32px;
@@ -609,3 +609,165 @@ button[type="button"]:hover::before {
 }
 
 /*ENDED - FOOTER SECTION*/
+
+/*BEGIN - MEDIA QUERY*/
+
+@media screen and (max-width: 1152px) {
+    .h-description>h1 {
+        font-size: 40px;
+    }
+
+    .m-description>h1,
+    .m-recommended-first>h1,
+    .mc-hottest>h1,
+    .mc-new>h1,
+    .mrs-left>h1,
+    .mrs-left>p,
+    .mc-lending>h1 {
+        font-size: 30px;
+    }
+
+    .fa-custom-navbar {
+        font-size: 20px;
+    }
+
+    .h-description>p,
+    .m-description>p {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+
+
+
+    .m-description,
+    .m-content {
+        max-width: 768px;
+    }
+
+    .mc-hottest-card-container,
+    .mc-new-card-container {
+        justify-content: space-between;
+    }
+
+    .mc-hottest-card {
+        width: 250px;
+    }
+
+    .mc-lending-card {
+        width: 180px;
+    }
+
+    .mc-new-card>img {
+        width: 180px;
+    }
+
+    .mc-hottest-card-description {
+        top: 10px;
+        left: 10px;
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+
+    .mc-hottest-card-footer>h1 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .m-recommended-first{
+        text-align: center;
+    }
+    .header{
+        height: calc(100vh + 128px);
+    }
+
+    .h-description>h1{
+        font-size: 30px;
+    }
+    .h-description>p{
+        font-size: 12px;
+    }
+    .m-recommended-first>h1{
+        font-size: 20px;
+    }
+    .mrs-left>p{
+        font-size: 14px;
+    }
+    .mrs-left>h1{
+        font-size: 20px;
+    }
+
+    .f-description{
+        margin-bottom: 16px;
+    }
+    .f-logo{
+        margin-bottom: 16px;
+    }
+    .f-social{
+        margin-bottom: 16px;
+    }
+
+.mc-new{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.mc-hottest{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+    .m-description,
+    .m-content {
+        max-width: 512px;
+    }
+
+    .mc-hottest-card-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mc-hottest-card:not(:last-of-type) {
+        margin-bottom: 16px;
+    }
+
+    .mc-hottest-card-container,
+    .mc-new-card-container {
+        justify-content: space-evenly;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 448px) {
+    .header{
+        height: calc(100vh + 256px);
+    }
+    .header{
+        background-image: none;
+    }
+    .mc-new-card-container,
+    .mc-lending-card-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .m-recommended-second{
+        flex-direction: column;
+    }
+
+}
+
+/*ENDED - MEDIA QUERY*/
