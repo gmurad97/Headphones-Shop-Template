@@ -612,6 +612,8 @@ button[type="button"]:hover::before {
 
 /*BEGIN - MEDIA QUERY*/
 
+/*MAX-WIDTH = 1152PX*/
+
 @media screen and (max-width: 1152px) {
     .h-description>h1 {
         font-size: 40px;
@@ -631,18 +633,14 @@ button[type="button"]:hover::before {
         font-size: 20px;
     }
 
+    .mc-hottest-card-footer>h1 {
+        font-size: 15px;
+    }
+
     .h-description>p,
     .m-description>p {
         font-size: 14px;
     }
-
-
-
-
-
-
-
-
 
     .m-description,
     .m-content {
@@ -658,10 +656,7 @@ button[type="button"]:hover::before {
         width: 250px;
     }
 
-    .mc-lending-card {
-        width: 180px;
-    }
-
+    .mc-lending-card,
     .mc-new-card>img {
         width: 180px;
     }
@@ -672,66 +667,66 @@ button[type="button"]:hover::before {
         font-size: 12px;
         padding: 3px 10px;
     }
-
-    .mc-hottest-card-footer>h1 {
-        font-size: 15px;
-    }
 }
+
+/*MAX-WIDTH = 768PX*/
 
 @media screen and (max-width: 768px) {
 
-    .m-recommended-first{
+    .m-description>h1,
+    .mc-lending>h1 {
         text-align: center;
     }
-    .header{
+
+    .h-description>h1 {
+        font-size: 30px;
+    }
+
+    .m-recommended-first>h1,
+    .mrs-left>h1 {
+        font-size: 20px;
+    }
+
+    .mrs-left>p {
+        font-size: 14px;
+    }
+
+    .h-description>p {
+        font-size: 12px;
+    }
+
+    .header {
         height: calc(100vh + 128px);
     }
 
-    .h-description>h1{
-        font-size: 30px;
-    }
-    .h-description>p{
-        font-size: 12px;
-    }
-    .m-recommended-first>h1{
-        font-size: 20px;
-    }
-    .mrs-left>p{
-        font-size: 14px;
-    }
-    .mrs-left>h1{
-        font-size: 20px;
+    .m-recommended-first {
+        text-align: center;
     }
 
-    .f-description{
-        margin-bottom: 16px;
+    .mc-new,
+    .mc-hottest {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    .f-logo{
-        margin-bottom: 16px;
-    }
-    .f-social{
+
+    .f-description,
+    .f-logo,
+    .f-social {
         margin-bottom: 16px;
     }
 
-.mc-new{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-.mc-hottest{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    .m-description {
+        max-width: none;
+        padding: 0px 32px;
+    }
 
-
-
-    .m-description,
     .m-content {
         max-width: 512px;
     }
 
-    .mc-hottest-card-container {
+    .mc-hottest-card-container,
+    .footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -745,29 +740,38 @@ button[type="button"]:hover::before {
     .mc-new-card-container {
         justify-content: space-evenly;
     }
-
-    .footer {
-        flex-direction: column;
-    }
 }
 
+/*MAX-WIDTH = 448PX*/
+
 @media screen and (max-width: 448px) {
-    .header{
+    .header {
         height: calc(100vh + 256px);
     }
-    .header{
+
+    .header {
         background-image: none;
     }
+
+    .h-description {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+
+    .h-description>h1,
+    .mc-maps-container>h1 {
+        text-align: center;
+    }
+
     .mc-new-card-container,
-    .mc-lending-card-container {
+    .mc-lending-card-container,
+    .m-recommended-second {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .m-recommended-second{
-        flex-direction: column;
-    }
-
 }
 
 /*ENDED - MEDIA QUERY*/
